@@ -1,8 +1,11 @@
 \begin{titlepage}
   \centering
 
-  \vspace{40mm}
-  \includegraphics[width=40mm]{logos/tum}
+  \IfFileExists{logos/tum.pdf}{%
+    \includegraphics[height=20mm]{logos/tum.pdf}
+  }{%
+    \vspace*{20mm}
+  }
 
   \vspace{5mm}
   {\huge\MakeUppercase{\getFaculty{}}}\\
@@ -27,6 +30,8 @@
     Submission Date: & \getSubmissionDate{} \\
   \end{tabular}
 
-  \vspace{20mm}
-  \includegraphics[width=20mm]{logos/faculty}
+  \IfFileExists{logos/faculty.pdf}{%
+    \vfill{}
+    \includegraphics[height=20mm]{logos/faculty.pdf}
+  }{}
 \end{titlepage}
